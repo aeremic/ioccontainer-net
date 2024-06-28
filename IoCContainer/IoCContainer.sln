@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoCContainer", "IoCContainer.csproj", "{7120FFA5-B421-4E87-A630-EB01805A1AAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoCContainer.Test", "IoCContainer.Test\IoCContainer.Test.csproj", "{8898A194-E651-485A-935F-99551180E8CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7120FFA5-B421-4E87-A630-EB01805A1AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7120FFA5-B421-4E87-A630-EB01805A1AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7120FFA5-B421-4E87-A630-EB01805A1AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7120FFA5-B421-4E87-A630-EB01805A1AAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8898A194-E651-485A-935F-99551180E8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8898A194-E651-485A-935F-99551180E8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8898A194-E651-485A-935F-99551180E8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8898A194-E651-485A-935F-99551180E8CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
