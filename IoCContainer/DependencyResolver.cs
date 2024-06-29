@@ -1,4 +1,6 @@
-﻿namespace IoCContainer;
+﻿using System.Reflection;
+
+namespace IoCContainer;
 
 public class DependencyResolver
 {
@@ -28,8 +30,13 @@ public class DependencyResolver
                 parametersImplementations[i] = GetService(parameters[i].ParameterType);
             }
 
-            return Activator.CreateInstance(dependency, parametersImplementations) ??
-                   throw new InvalidOperationException();
+            if (dependency.GetInterfaces().First().Name == interfaceType.Name)
+            {
+                return Activator.CreateInstance(dependency, parametersImplementations) ??
+                       throw new InvalidOperationException();
+            }
+
+            throw new InvalidOperationException();
         }
 
         return Activator.CreateInstance(dependency) ?? throw new InvalidOperationException();
