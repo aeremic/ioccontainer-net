@@ -2,20 +2,15 @@
 
 public class DependencyContainer
 {
-    private List<Type> _dependencies = new();
-
-    public void AddDependency(Type type)
-    {
-        _dependencies.Add(type);
-    }
+    private List<(Type, Type)> _dependencies = new();
     
-    public void AddDependency<T>()
+    public void AddDependency<TConcrete, TInterface>()
     {
-        _dependencies.Add(typeof(T));
+        _dependencies.Add((typeof(TConcrete), typeof(TInterface)));
     }
 
-    public Type GetDependency(Type type)
+    public Type GetDependency(Type interfaceType)
     {
-        return _dependencies.First(d => d.Name == type.Name);
+        return _dependencies.First(d => d.Item2.Name == interfaceType.Name).Item1;
     }
 }

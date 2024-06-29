@@ -14,9 +14,9 @@ public class DependencyResolver
         return (T)GetService(typeof(T));
     }
 
-    public object GetService(Type type)
+    public object GetService(Type interfaceType)
     {
-        var dependency = _container.GetDependency(type);
+        var dependency = _container.GetDependency(interfaceType);
         var constructor = dependency.GetConstructors().Single();
         var parameters = constructor.GetParameters().ToArray();
 
